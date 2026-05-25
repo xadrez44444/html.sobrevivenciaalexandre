@@ -1,107 +1,88 @@
-/* Configurações Globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Configurações Gerais */
 body {
+    background-color: #121214;
+    color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1e251c; /* Verde militar escuro */
-    color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    height: 100vh;
+    margin: 0;
 }
 
-.container {
-    background-color: #2a3326;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    max-width: 600px;
-    width: 100%;
+/* Container do Jogo */
+.quiz-container {
+    background-color: #1a1a1e;
+    border: 2px solid #ffb703;
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
-    border: 1px solid #3d4a37;
+    box-shadow: 0px 0px 20px rgba(255, 183, 3, 0.3);
 }
 
 h1 {
-    color: #8da47e;
-    margin-bottom: 10px;
-    font-size: 2rem;
+    color: #ffb703;
+    margin-top: 0;
+    letter-spacing: 2px;
 }
 
-.subtitulo {
-    color: #b3c3ab;
-    margin-bottom: 30px;
-    font-size: 1rem;
+hr {
+    border: 1px solid #333;
+    margin-bottom: 20px;
 }
 
-/* Grade de Botões */
-.botoes-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+#question {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+/* Botões de Resposta */
+.options-grid {
+    display: flex;
+    flex-direction: column;
     gap: 12px;
-    margin-bottom: 30px;
 }
 
-@media (min-width: 480px) {
-    .botoes-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.btn-item {
-    background-color: #3d4a37;
-    color: #e0ebd9;
-    border: 2px solid #52634a;
-    padding: 15px;
+button {
+    background-color: #2a2a30;
+    color: white;
+    border: 1px solid #444;
+    padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
-.btn-item:hover {
-    background-color: #52634a;
-    border-color: #8da47e;
-    transform: translateY(-2px);
+button:hover {
+    background-color: #ffb703;
+    color: black;
+    border-color: #ffb703;
+    transform: scale(1.02);
 }
 
-.btn-item.ativo {
-    background-color: #8da47e;
-    color: #1e251c;
-    border-color: #fff;
+/* Tela de Resultado */
+.hidden {
+    display: none;
 }
 
-/* Painel de Informações */
-.painel {
-    background-color: #1e251c;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #8da47e;
-    text-align: left;
-    transition: all 0.4s ease;
-    opacity: 1;
-    transform: scale(1);
+#score-text {
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 
-.painel.escondido {
-    opacity: 0;
-    transform: scale(0.95);
-    pointer-events: none;
+#restart-btn {
+    background-color: #fb8500;
+    color: white;
+    border: none;
+    width: 100%;
 }
 
-.painel h2 {
-    color: #8da47e;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.painel p {
-    color: #d1dcd0;
-    line-height: 1.6;
-}
+#restart-btn:hover {
+    background-color: #ffb703;
+    color: black;
+}''''''''''''''''
