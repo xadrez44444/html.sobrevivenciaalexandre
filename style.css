@@ -1,0 +1,107 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e251c; /* Verde militar escuro */
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #2a3326;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #3d4a37;
+}
+
+h1 {
+    color: #8da47e;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.subtitulo {
+    color: #b3c3ab;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* Grade de Botões */
+.botoes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 480px) {
+    .botoes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.btn-item {
+    background-color: #3d4a37;
+    color: #e0ebd9;
+    border: 2px solid #52634a;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-item:hover {
+    background-color: #52634a;
+    border-color: #8da47e;
+    transform: translateY(-2px);
+}
+
+.btn-item.ativo {
+    background-color: #8da47e;
+    color: #1e251c;
+    border-color: #fff;
+}
+
+/* Painel de Informações */
+.painel {
+    background-color: #1e251c;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #8da47e;
+    text-align: left;
+    transition: all 0.4s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.painel.escondido {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+.painel h2 {
+    color: #8da47e;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.painel p {
+    color: #d1dcd0;
+    line-height: 1.6;
+}
